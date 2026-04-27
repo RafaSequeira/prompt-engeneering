@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introducción a los LLMs</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .article-content h3 {
+      color: white;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Introducción a los LLMs</h1>
+    </div>
+
+    <div class="article-content">
+      <h2>LLMs - Una Breve Descripción General</h2>
+
+      <p>
+        Antes de aprender cualquier técnica de Prompting, necesitás entender una versión básica de cómo funcionan los LLMs.
+      </p>
+
+      <h3>LLMs, la Parte Sencilla</h3>
+
+      <p>
+        Los LLMs son máquinas de predicción de patrones que generan un token a la vez (por ahora, no te preocupés por lo que es un token, los llamaremos palabras)... es decir, una palabra a la vez. Esto significa que los LLMs no tienen capacidad de "planificar con anticipación"; están "pensando" mientras escriben. Son algo similares al autocompletado del teléfono, pero MUCHO mejores, y en breve explicamos por qué.
+      </p>
+
+      <p>
+        Otro aspecto importante que tenés que conocer es que los LLMs son <span class="highlight">no determinísticos</span>.
+      </p>
+
+      <p>
+        Un ejemplo de algo determinístico es una calculadora. Cada vez que ingresás lo mismo (2+2), obtenés el mismo resultado (4). Los LLMs no funcionan así; son no determinísticos. Esto significa que aunque vos y yo ingresemos exactamente el mismo contenido en el mismo modelo al mismo tiempo... aún así obtendríamos respuestas diferentes. ¡Y cuánto difieren esas respuestas puede variar enormemente! A veces se verán muy similares, con apenas una o dos palabras de diferencia, pero otras veces serán completamente distintas.
+      </p>
+
+      <p>
+        Podés comprobarlo vos mismo: abrí 5 chats diferentes con tu LLM favorito (Claude, ChatGPT, Gemini, etc.) y copiá el mismo prompt en cada uno. ¡Vas a ver las diferencias!
+      </p>
+
+      <h4 style="color: white; margin-top: 1.5rem; margin-bottom: 0.5rem;">¿Por qué nos importa esto?</h4>
+
+      <p>
+        El hecho de que los LLMs sean no determinísticos es importante saberlo, porque implica que existe cierta aleatoriedad en las respuestas, lo que nos obliga a tenerla en cuenta e intentar minimizarla. Esta aleatoriedad también puede generar imprecisiones que conviene reducir al máximo.
+      </p>
+
+      <h3>LLMs, la Parte Intermedia</h3>
+
+      <p>
+        En 2017, Google publicó <em>Attention Is All You Need</em>, un trabajo revolucionario para la "Arquitectura Transformer". Antes de los Transformers, los modelos se parecían mucho al autocompletado del teléfono: solo podían rastrear unas pocas palabras cercanas.
+      </p>
+
+      <p>
+        El gran avance fue el mecanismo de "atención", que le permite a los modelos identificar, dentro de un contenido mucho más extenso, qué es lo que realmente importa para la predicción de patrones. Sin entrar en demasiados detalles sobre la nueva arquitectura, basta con saber que antes de este avance, el autocompletado podía rastrear apenas unas pocas palabras. Si pensás en el autocompletado del teléfono, al principio funciona muy bien, pero a medida que agregás palabras, la calidad de las sugerencias cae exponencialmente.
+      </p>
+
+      <p>
+        Con esta nueva arquitectura, los modelos pasaron a poder prestar atención a cientos o miles de palabras. Los modelos actuales tienen ventanas de contexto (más sobre esto más adelante) de incluso un millón o más de palabras (técnicamente, tokens).
+      </p>
+
+      <h3>LLMs, la Parte Avanzada</h3>
+
+      <p>
+        Los LLMs son redes neuronales inspiradas en el funcionamiento del cerebro humano. Así como podés fortalecer tus conexiones neuronales mediante la práctica, los LLMs ajustan sus parámetros a través del entrenamiento.
+      </p>
+
+      <p>
+        El entrenamiento ocurre en dos etapas: el pre-entrenamiento y el fine-tuning. Lo único que necesitás entender es que, al trabajar con modelos de código abierto, a veces podés usar el modelo "base", que es el que pasó por el pre-entrenamiento sin fine-tuning. La etapa de fine-tuning es la que convierte a estos LLMs en asistentes útiles, por lo que cuando estás hablando con ChatGPT o Claude, ese formato de preguntas y respuestas en tono conversacional viene precisamente de esta fase.
+      </p>
+
+      <p>
+        ¿Algo realmente fascinante? El modelo completo no es más que un archivo de parámetros y unas pocas cientos de líneas de código para la inferencia. Eso es todo. La inteligencia está en esos miles de millones de parámetros.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers
+    </p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

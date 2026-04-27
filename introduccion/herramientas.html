@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Copilot en VS Code</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .article-content h3 {
+      color: white;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .article-content ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .article-content ul {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Herramientas a utilizar</h1>
+    </div>
+
+    <div class="article-content">
+      <p>
+        Esta guía está orientada para crear prompts eficientes a la hora del desarrollo de software, cada uno puede sentirse en la libertad de utilizar ya sea Cursor, Antigravity, Claude Code, etc, inclusive utilizar los chats directamente como ChatGPT, Claude Chat, Gemini, etc, pero esto conllevaría a copiar y pegar el codigo generado en todo momento y esto puede llevar a cometer errores.
+      </p>
+
+      <p>
+        Para efectos rápidos y accesibles para la mayoría, se estará desarrollando el taller con GitHub Copilot en VS Code, por lo que se detalla la forma de integrar los LLM´s con VS code.
+      </p>
+
+      <h2>GitHub Copilot Chat en VS Code</h2>
+
+      <h3>1. Requisitos Previos</h3>
+
+      <p>Antes de iniciar, asegurate de tener esto:</p>
+
+      <ul>
+        <li>Cuenta de GitHub.</li>
+        <li>VS Code instalado.</li>
+      </ul>
+
+      <h3>2. Instalación de la Extensión</h3>
+
+      <p>No tenés que complicarte mucho, todo se hace desde el mismo editor:</p>
+
+      <ol>
+        <li>Abrí VS Code.</li>
+        <li>Andate al icono de Extensions en la barra lateral izquierda o presioná <span class="highlight">Ctrl+Shift+X</span>.</li>
+        <li>En el buscador, escribí "GitHub Copilot Chat".</li>
+        <li>Dale clic al botón de Install.</li>
+      </ol>
+
+      <h3>3. Autorizá tu Cuenta</h3>
+
+      <p>Una vez instalada, vas a ver que abajo a la derecha te sale una notificación:</p>
+
+      <ol>
+        <li>Hacé clic en el mensaje que dice que tenés que iniciar sesión en GitHub.</li>
+        <li>Se te va a abrir el navegador; ahí solo tenés que darle permiso a VS Code para entrar a tu cuenta.</li>
+        <li>¡Listo! Si ves el icono del robotcito en la barra inferior de VS Code sin señales de error, ya estás listo.</li>
+      </ol>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers
+    </p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+# ========================
+# OS & System Files
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================
+# Editor & IDE
+# ========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# Logs & Debug
+# ========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# Node / npm (for tooling)
+# ========================
+node_modules/
+package-lock.json
+yarn.lock
+.npm/
+
+# ========================
+# Build & Output
+# ========================
+dist/
+build/
+out/
+.cache/
+*.min.js
+*.min.css
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ========================
+# Claude / Anthropic
+# ========================
+# API keys — never commit these
+.claude_api_key
+anthropic_api_key.txt
+claude_config.json
+
+# Claude project context files (if generated locally)
+.claude/
+claude_output/
+*.claude_cache
+
+# ========================
+# CSS Preprocessors
+# ========================
+.sass-cache/
+*.css.map
+*.sass.map
+
+# ========================
+# JavaScript Bundlers
+# ========================
+.parcel-cache/
+.webpack/
+.rollup.cache/
+
+# ========================
+# Misc
+# ========================
+*.bak
+*.tmp
+*.swp
+coverage/
+.nyc_output/

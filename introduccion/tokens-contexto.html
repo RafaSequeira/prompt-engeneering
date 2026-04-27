@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokens y Contexto</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .article-content h3 {
+      color: white;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Tokens y Contexto</h1>
+    </div>
+
+    <div class="article-content">
+      <h2>Tokens: como palabras... pero no del todo</h2>
+
+      <p>
+        Los tokens son para el modelo lo que las palabras son para los humanos. Los tokens equivalen aproximadamente a 0.75 palabras, ¡pero no siempre es así! Curiosamente, "JavaScript" podría ser un solo token, pero "javascript" (en minúscula) podrían ser dos. No estamos acá para descifrar qué es exactamente un token; todo lo que necesitás entender es que son las palabras, el código o cualquier contenido que le ingresás al modelo o que él te devuelve.
+      </p>
+
+      <h2>Ventanas de Contexto: cuántos tokens puede "recordar" un LLM a la vez</h2>
+
+      <p>
+        Ahora que ya sabés qué es un token, hablemos del contexto y de las ventanas de contexto.
+      </p>
+
+      <h3>Los LLMs no tienen memoria, parece que sí, pero no lo es, ¿cómo funciona esto?</h3>
+
+      <p>
+        Cada vez que ingresás un input al LLM, este responde, y luego todo ese historial del chat se le envía de nuevo al LLM. Así que, aunque no lo veás, cada vez que enviás un mensaje, TODOS tus mensajes anteriores también se están mandando de vuelta. Todos tus inputs y todos los outputs del LLM (dentro de ese mismo chat).
+      </p>
+
+      <p>
+        Así es como los LLMs "recuerdan": simplemente leyendo toda la conversación una y otra vez.
+      </p>
+
+      <p>
+        Pero llega un punto en el que al LLM se le acaba la "memoria", y esa es la <span class="highlight">ventana de contexto</span>: la cantidad máxima de tokens que el modelo es capaz de procesar a la vez.
+      </p>
+
+      <p>
+        Es fundamental que entendás esto, porque en estas técnicas de Prompting vamos a utilizar las ventanas de contexto y aprenderemos cuándo es mejor abrir un chat nuevo para reiniciar esas ventanas.
+      </p>
+
+      <p>
+        También es importante que sepás que las ventanas de contexto pueden llegar a su límite sin que te dés cuenta. Cuando alcanzás ese tope, el contexto más antiguo (es decir, tus primeros inputs y outputs) es lo primero en desaparecer. <span class="highlight">Lo primero que entró es lo primero que sale.</span> ¡Y el modelo no te va a avisar que esto pasó!
+      </p>
+
+      <p>
+        Si estás teniendo una conversación y de pronto notás que el modelo no recuerda lo que dijiste al principio... como por ejemplo: "esta es la ESTRUCTURA MÁS IMPORTANTE DE MI APP", y te pasás de esa ventana de contexto, esa información se borró. Se perdió sin que lo sepás. Aunque los modelos actuales tienen ventanas de contexto bastante grandes, este sigue siendo un concepto clave que tenés que dominar mientras avanzamos con nuestras técnicas de Prompting.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers
+    </p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
