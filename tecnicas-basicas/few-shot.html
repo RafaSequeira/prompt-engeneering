@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Few Shot</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Few Shot</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Few-shot significa darle dos o más ejemplos al modelo. Esta técnica aprovecha la capacidad de los LLMs para aprender patrones a partir de varios casos, lo que suele mejorar la precisión.</p>
+
+      <p>Si zero-shot son cero ejemplos y one-shot es un ejemplo, few-shot son múltiples ejemplos. Es especialmente útil para tareas complejas, formatos variados o clasificación con muchas categorías.</p>
+
+      <p>La investigación demuestra que los modelos grandes se benefician mucho de few-shot, porque la precisión de sus respuestas crece más rápido con ejemplos adicionales.</p>
+
+      <div class="note">
+        <strong>Lo importante al usar few-shot:</strong>
+        <ul>
+          <li>Incluí ejemplos variados y representativos.</li>
+          <li>Combiná casos normales y excepciones relevantes.</li>
+          <li>Mantené los ejemplos concisos pero completos.</li>
+          <li>Probá con diferentes cantidades de ejemplos para encontrar el mejor balance.</li>
+        </ul>
+      </div>
+
+      <p>Few-shot ayuda a estandarizar las respuestas cuando trabajás con entradas diversas o necesitás un formato muy consistente.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Prompt:</strong>
+        <p>"Clasificá el nivel de urgencia del ticket de soporte en: bajo, medio, alto o crítico."</p>
+        <p><strong>Ejemplos:</strong></p>
+        <p>1. Entrada: "Mi interfaz tiene un botón que está ligeramente desalineado."<br>Salida: "bajo"</p>
+        <p>2. Entrada: "No puedo acceder a mi cuenta desde ayer por la mañana."<br>Salida: "alto"</p>
+        <p>3. Entrada: "La aplicación se cae cuando intento procesar pagos."<br>Salida: "crítico"</p>
+        <p>4. Entrada: "El email de confirmación tarda 10 minutos en llegar."<br>Salida: "medio"</p>
+        <p><strong>Ahora clasificá esto:</strong></p>
+        <p>"Los usuarios no pueden descargar sus reportes en PDF."</p>
+        <strong>Salida esperada:</strong>
+        <p>"alto"</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Clasificación multi-categoría:</strong> Categorizar items en muchas clases con varios ejemplos.</li>
+        <li><strong>Generación de respuestas consistentes:</strong> Mantener un formato uniforme en muchas salidas.</li>
+        <li><strong>Análisis de sentimiento matizado:</strong> Clasificar entre múltiples niveles de sentimiento.</li>
+        <li><strong>Extracción de entidades:</strong> Identificar personas, lugares, organizaciones con ejemplos.</li>
+        <li><strong>Generación de comentarios de código:</strong> Añadir comentarios en un estilo consistente.</li>
+        <li><strong>Traducción de jerga técnica:</strong> Simplificar términos complejos con ejemplos.</li>
+        <li><strong>Priorización de tareas:</strong> Asignar niveles de prioridad consistentemente.</li>
+      </ul>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «Analizá la decisión de negocio con el nivel de detalle solicitado. Decisión: Abrir una nueva tienda. Nivel: rápido. Respuesta: ... Decisión: Cambiar proveedor de software. Nivel: evaluación estándar. Respuesta: ...»
+      </div>
+
+      <p>En general, few-shot es la mejor técnica cuando querés que el modelo imite una estructura determinada y tenga menos margen para equivocarse.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Shot</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>One Shot</h1>
+    </div>
+
+    <div class="article-content">
+      <p>One-shot es la técnica de darle un ejemplo al modelo. En vez de pedir algo sin ejemplos, le mostrás un caso de cómo tiene que lucir la respuesta.</p>
+
+      <p>Esta técnica es especialmente útil cuando la tarea no es trivial y querés que el modelo entienda un patrón específico sin necesitar muchos ejemplos.</p>
+
+      <p>Pensalo como una conversación con un compa: en vez de explicar todo desde cero, le mostrás un ejemplo y le pedís que haga algo similar.</p>
+
+      <div class="note">
+        <strong>Consejos:</strong>
+        <ul>
+          <li>Elegí un ejemplo representativo.</li>
+          <li>No uses un caso extremo o poco común.</li>
+          <li>Incluí todos los elementos importantes que quieras en la respuesta.</li>
+          <li>No hagas el ejemplo excesivamente complejo.</li>
+        </ul>
+      </div>
+
+      <p>Un prompt one-shot puede incluir una instrucción seguida de un ejemplo de entrada y salida. Esto ayuda al modelo a generalizar el patrón que esperás.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Prompt:</strong>
+        <p>"Traducí los siguientes textos de inglés a español manteniendo el tono formal."</p>
+        <p><strong>Ejemplo:</strong></p>
+        <p>Entrada: "The conference will be held on March 15th at the main auditorium."</p>
+        <p>Salida: "La conferencia se llevará a cabo el 15 de marzo en el auditorio principal."</p>
+        <p><strong>Ahora traducí esto:</strong></p>
+        <p>"The project deadline has been extended to next quarter."</p>
+        <strong>Salida esperada:</strong>
+        <p>"El plazo del proyecto ha sido extendido al próximo trimestre."</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Traducciones:</strong> Enseñar un estilo formal o informal con un ejemplo.</li>
+        <li><strong>Transformación de datos:</strong> Convertir un formato a otro con un ejemplo guía.</li>
+        <li><strong>Cambio de tono:</strong> Reescribir texto con un tono específico mostrando un ejemplo.</li>
+        <li><strong>Extracción de información:</strong> Extraer datos de un texto de una manera específica.</li>
+        <li><strong>Generación de código:</strong> Crear código con un patrón específico basado en un ejemplo.</li>
+        <li><strong>Resumen en formato específico:</strong> Resumir en bullets, números o párrafos según el modelo.</li>
+      </ul>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «Escribí una introducción para un blog sobre trabajo remoto. Ejemplo: Tema: Beneficios del ejercicio matutino. Introducción: ‘Imaginá que son las 6 a.m. y en lugar de posponer la alarma, te calzás las zapatillas...’ Ahora escribí una introducción sobre: Consejos para productividad en trabajo remoto.»
+      </div>
+
+      <p>One-shot aporta más fiabilidad sin necesidad de dar muchos ejemplos. Por eso es un buen balance entre velocidad y precisión.</p>
+
+      <h2 style="margin-top: 2rem;">Cuándo usar one-shot</h2>
+
+      <p>Usalo cuando quieras guiar al modelo sin ofrecerle todos los casos posibles. Es ideal para tareas con un formato definido y donde un solo ejemplo puede transmitir claramente la estructura.</p>
+
+      <p>Si estás armando prompts para escritura, análisis o generación de datos, one-shot puede ayudar a reducir la variabilidad de las respuestas manteniendo la simplicidad.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

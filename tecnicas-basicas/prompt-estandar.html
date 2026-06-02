@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Estándar</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Prompt Estándar</h1>
+    </div>
+
+    <div class="article-content">
+      <p>La técnica de prompt estándar es la base de todo lo que hacemos con los LLMs. Es simplemente pedirle algo al modelo de forma directa, sin ningún formato especial ni ejemplos adicionales.</p>
+
+      <p>Un prompt estándar puede ser tan directo como: «Escribí una función en JavaScript que ordene un arreglo y elimine duplicados» o «Explicame por qué el trueno da miedo». No hay nada sofisticado, solo instrucciones claras y sencillas.</p>
+
+      <p>Esta técnica funciona igual que cuando le preguntás algo a un amigo. Si la pregunta es vaga, la respuesta va a ser vaga. Si la pregunta es precisa, es más probable que obtengas una respuesta precisa.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «Crea una aplicación de biblioteca de prompts que permita guardar y eliminar prompts, usando HTML, CSS y JavaScript.»
+      </div>
+
+      <p>Los prompts estándar son el primer bloque de construcción de todas las demás técnicas. Son el punto de partida: si querés mejorar la calidad de las respuestas, empezá por formular una solicitud clara.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Entrada:</strong>
+        <p>"Generá una función JavaScript que tome un arreglo de números y devuelva el promedio, la suma y el número mayor."</p>
+        <strong>Salida esperada:</strong>
+        <p>Una función con comentarios explicativos que realice el cálculo correctamente.</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Tareas de escritura simple:</strong> "Escribí un párrafo sobre la importancia de la IA"</li>
+        <li><strong>Solicitudes de código:</strong> "Crea una función que valide emails"</li>
+        <li><strong>Preguntas directas:</strong> "¿Cuál es la diferencia entre var, let y const en JavaScript?"</li>
+        <li><strong>Explicaciones:</strong> "Explicame cómo funcionan los closures en JavaScript"</li>
+        <li><strong>Traducciones:</strong> "Traducé este texto al francés: [texto]"</li>
+        <li><strong>Resúmenes:</strong> "Resumí este artículo en 5 puntos clave: [artículo]"</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Consejos clave</h2>
+
+      <p>Si el modelo no entiende lo que pedís, la culpa no es del modelo: es del prompt. Agregá más contexto o especificá mejor el formato de salida para que la respuesta sea más útil.</p>
+
+      <p>Los prompts estándar son ideales para tareas simples y directas. Para tareas más complejas, podés usar técnicas como zero-shot, one-shot, few-shot o ubicación de contexto.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

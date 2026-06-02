@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Shot</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Zero Shot</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Zero-shot es una variación de los prompts estándar donde no se dan ejemplos. El modelo debe inferir lo que queremos únicamente con la instrucción y su conocimiento previo.</p>
+
+      <p>Todos los prompts zero-shot son prompts estándar, pero no todos los prompts estándar son zero-shot. La diferencia clave es que un prompt zero-shot no incluye ejemplos que muestren el formato o el estilo de la respuesta.</p>
+
+      <p>Esta técnica es útil para tareas simples que el modelo ya conoce bien, como clasificar texto, responder preguntas directas o generar contenido con requerimientos básicos.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «Clasificá la valoración del cliente en neutral, negativa o positiva. Texto: El producto estuvo bien. Funcionó, pero no fue fácil de usar. Sentimiento:»
+      </div>
+
+      <p>Zero-shot es una buena opción cuando no querés perder tiempo armando ejemplos y esperás que el modelo resuelva la tarea con información general.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Entrada:</strong>
+        <p>"Clasificá el siguiente sentimiento en: positivo, negativo o neutro. Texto: 'El producto llegó rápido, pero la calidad no fue lo que esperaba.' Sentimiento:"</p>
+        <strong>Salida esperada:</strong>
+        <p>"negativo"</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Cuándo usar zero-shot</h2>
+
+      <p>Usá zero-shot para tareas simples y bien definidas, como clasificación básica, resúmenes cortos o verificaciones rápidas, siempre que el modelo cuente con el contexto necesario.</p>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Clasificación de sentimientos:</strong> Categorizar opiniones de clientes sin ejemplos.</li>
+        <li><strong>Análisis de spam:</strong> Determinar si un email es spam o legítimo.</li>
+        <li><strong>Extracción de temas:</strong> Identificar el tema principal de un texto.</li>
+        <li><strong>Validación de datos:</strong> Verificar si un texto cumple con ciertos criterios.</li>
+        <li><strong>Respuestas de opción múltiple:</strong> Elegir la respuesta correcta entre opciones.</li>
+        <li><strong>Resúmenes rápidos:</strong> Hacer un resumen corto de un artículo.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Ventajas y límites</h2>
+
+      <p>Zero-shot es rápido y directo, pero puede ser menos confiable cuando la tarea es compleja o requiere un formato muy específico. En esos casos, un prompt con ejemplos suele dar mejores resultados.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

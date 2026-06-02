@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delimitadores</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Delimitadores</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Un delimitador es un borde o separador dentro de un prompt. Puede ser una coma, un punto, un bloque de texto, un tag XML o cualquier marcador que ayude a dividir la información en secciones claras.</p>
+
+      <p>Los modelos se benefician cuando la entrada tiene una jerarquía visual definida. Los delimitadores le dicen al LLM «esto es una sección», «esto es otra sección» y facilitan la comprensión de prompts complejos.</p>
+
+      <p>No importa tanto qué delimitador elegís, lo importante es ser consistente y claro. Podés usar etiquetas personalizadas, bloques con líneas, o incluso XML para separar partes diferentes del prompt.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong>
+        «<research_area>
+        <topic>Prompt Management Solutions</topic>
+        <questions>- ¿Qué herramientas existen para gestión de prompts?</questions>
+        </research_area>»
+      </div>
+
+      <p>Los delimitadores son útiles cada vez que el prompt tiene varias secciones o cuando necesitás darle estructura a datos extensos. Funcionan como los títulos y subtítulos de un artículo.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Prompt con delimitadores:</strong>
+        <p>&lt;task&gt;</p>
+        <p>Analiza el siguiente feedback de cliente</p>
+        <p>&lt;/task&gt;</p>
+        <p>&lt;feedback&gt;</p>
+        <p>"El diseño es bonito pero tarda demasiado en cargar. A veces no puedo acceder desde el celular."</p>
+        <p>&lt;/feedback&gt;</p>
+        <p>&lt;output_format&gt;</p>
+        <p>Problema: [identificar]</p>
+        <p>Severidad: [bajo/medio/alto]</p>
+        <p>Acción recomendada: [sugerir]</p>
+        <p>&lt;/output_format&gt;</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Análisis de feedback:</strong> Separar comentarios, problemas y acciones.</li>
+        <li><strong>Documentación técnica:</strong> Organizar requisitos, restricciones y consideraciones.</li>
+        <li><strong>Investigación multi-tema:</strong> Dividir tópicos para que el modelo los procese independientemente.</li>
+        <li><strong>Especificaciones de producto:</strong> Separar funcionalidades, restricciones y criterios de aceptación.</li>
+        <li><strong>Análisis competitivo:</strong> Comparar características de múltiples productos en secciones.</li>
+        <li><strong>Generación de reportes:</strong> Estruturar secciones distintas claramente.</li>
+        <li><strong>Prompts complejos:</strong> Cualquier prompt que necesite múltiples contextos o instrucciones.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Cuándo usarlos</h2>
+
+      <p>Usalos cuando el prompt es complejo o cuando hay varios bloques de información distintos. Por ejemplo, si le pedís al modelo que analice un plan de producto, dividí el prompt en áreas de investigación separadas.</p>
+
+      <p>Esto mejora la capacidad del modelo para procesar cada parte de forma independiente y te da más control sobre el resultado.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

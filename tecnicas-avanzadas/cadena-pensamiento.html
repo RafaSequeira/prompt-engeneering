@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadena de Pensamiento</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Cadena de Pensamiento</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Cadena de pensamiento es una técnica que le pide al modelo razonar paso a paso. Con una frase simple como «pensá en esto paso a paso», podés mejorar significativamente la exactitud en tareas de razonamiento.</p>
+
+      <p>Un estudio mostró que agregar «let's think step by step» aumentó la precisión en problemas matemáticos y lógicos de 17.7% a 78.7%. Eso demuestra que los LLMs se benefician mucho cuando los guiás a pensar en voz alta.</p>
+
+      <p>Esta técnica es útil para preguntas complejas, problemas de lógica, cálculos o cualquier tarea donde el modelo deba seguir una secuencia de pasos.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «¿Pueden volar los pingüinos? Pensá en esto paso a paso.»
+      </div>
+
+      <p>Cadena de pensamiento no es solo para preguntas de matemática; también sirve para desarrollo de código, análisis complejo y decisiones que requieren varias etapas.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Prompt:</strong>
+        <p>"Si una botella con tapa cuesta $5 y la botella cuesta $4 más que la tapa, ¿cuánto cuesta la tapa? Pensá en esto paso a paso."</p>
+        <strong>Salida esperada:</strong>
+        <p>"Paso 1: Defino variables. Botella = B, Tapa = T</p>
+        <p>Paso 2: Escribo las ecuaciones: B + T = 5 (precio total) y B = T + 4 (botella cuesta 4 más)</p>
+        <p>Paso 3: Sustituyo: (T + 4) + T = 5</p>
+        <p>Paso 4: Resuelvo: 2T + 4 = 5, entonces 2T = 1, T = 0.5</p>
+        <p>Paso 5: Verifico: si T = 0.5 entonces B = 4.5, y 4.5 + 0.5 = 5 ✓</p>
+        <p>La tapa cuesta $0.50"</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Problemas matemáticos:</strong> Resolver paso a paso ecuaciones o cálculos.</li>
+        <li><strong>Análisis de código:</strong> Depurar y explicar qué está mal en cada paso.</li>
+        <li><strong>Decisiones complejas:</strong> Ayudar a evaluar pros y contras de opciones.</li>
+        <li><strong>Escritura creativa:</strong> Planificar la estructura de una historia o artículo.</li>
+        <li><strong>Planificación de proyectos:</strong> Desglosar tareas grandes en pasos.</li>
+        <li><strong>Diagnóstico técnico:</strong> Identificar problemas iterativamente.</li>
+        <li><strong>Enseñanza y mentoría:</strong> Explicar conceptos de forma más clara.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Cuándo usarla</h2>
+
+      <p>Usala cuando la respuesta correcta requiere razonamiento o cuando necesitás que el modelo no se quede en lo primero que se le ocurre. Es ideal para tareas complejas donde querés transparencia en el proceso.</p>
+
+      <p>También es muy útil para construir prompts de características avanzadas en tus aplicaciones, porque te ayuda a dividir el problema en pasos claros.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salida Estructurada</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Salida Estructurada</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Salida estructurada es una técnica avanzada para lograr respuestas consistentes y útiles desde el primer intento. Aunque puede parecer que toma más tiempo, evita que tengas que copiar, pegar y reformatear el resultado después.</p>
+
+      <p>Esto es muy importante cuando usás LLMs en aplicaciones de producción: no querés recibir respuestas en párrafos arbitrarios si necesitás JSON o una lista de elementos que tu app pueda procesar directamente.</p>
+
+      <p>Cuando formateás tu prompt para pedir un resultado estructurado, le estás dando al modelo una guía clara sobre cómo debe organizar la salida. Eso reduce la probabilidad de que te devuelva algo mixto que rompa tu flujo.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong> «Extraé los detalles de la reunión de este correo. Formato:
+        Date: [fecha]
+        Time: [hora]
+        Location: [ubicación]
+        Topic: [tema]»
+      </div>
+
+      <p>Usá salida estructurada siempre que necesités un formato específico, cuando estés generando elementos similares o cuando quieras extraer datos estructurados de texto no estructurado.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Prompt:</strong>
+        <p>"Extrae la información del siguiente email en formato JSON."</p>
+        <p>Email: "Tenemos una reunión mañana a las 14:00 en la sala de conferencias 3. El tema es presentar el nuevo plan de marketing. Confirma tu asistencia."</p>
+        <p><strong>Formato esperado:</strong></p>
+        <p>```json</p>
+        <p>{</p>
+        <p>"date": "mañana",</p>
+        <p>"time": "14:00",</p>
+        <p>"location": "sala de conferencias 3",</p>
+        <p>"topic": "presentar el nuevo plan de marketing",</p>
+        <p>"action_required": "confirmar asistencia"</p>
+        <p>}</p>
+        <p>```</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Extracción de datos:</strong> Convertir texto a JSON, CSV o XML.</li>
+        <li><strong>Generación de APIs:</strong> Producir respuestas estructuradas para integración.</li>
+        <li><strong>Procesamiento de formularios:</strong> Extraer campos específicos de texto libre.</li>
+        <li><strong>Análisis de documentos:</strong> Crear índices o tablas de contenidos estructurados.</li>
+        <li><strong>Generación de listas:</strong> Crear arrays o tablas con formato consistente.</li>
+        <li><strong>Integración de datos:</strong> Preparar salida para bases de datos o aplicaciones.</li>
+        <li><strong>Reportes automatizados:</strong> Generar reportes en formato específico.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">¿Por qué sirve?</h2>
+
+      <p>Te ahorra tiempo y reduce errores. En lugar de depender de que el modelo adivine el formato correcto, le das una estructura explícita y le pedís que devuelva solo eso.</p>
+
+      <p>Esto también te permite usar el resultado en otras partes de tu app sin tener que parsear o corregir la salida manualmente.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

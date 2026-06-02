@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personas</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Personas</h1>
+    </div>
+
+    <div class="article-content">
+      <p>Una persona en un prompt no hace que el modelo sea más inteligente, pero sí lo dirige hacia ciertos patrones de datos que ya vio durante su entrenamiento.</p>
+
+      <p>Si le decís al modelo «sos un experto en bases de datos», está más propenso a generar respuestas relacionadas con índices, normalización y consultas, porque está activando ese tipo de información en su memoria.</p>
+
+      <p>Las personas también ayudan con el tono y el estilo. Si querés una respuesta amable y fácil de entender, pedile que actúe como un tutor. Si querés algo más técnico, podés pedir una persona de seguridad o un arquitecto.</p>
+
+      <div class="quote">
+        <strong>Ejemplo:</strong>
+        «Revisión de código: sos un ingeniero senior enfocado en seguridad y rendimiento»
+      </div>
+
+      <p>Una misma tarea puede variar mucho según la persona que uses. Por ejemplo, un UX designer y un security engineer te darán respuestas muy distintas sobre el mismo código.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Tarea: Revisar un formulario de login</strong>
+        <p><strong>Como Diseñador UX:</strong></p>
+        <p>"Sos un diseñador UX enfocado en experiencia de usuario. Revisa este formulario de login y sugiere mejoras para hacerlo más intuitivo y amigable."</p>
+        <p><strong>Como Security Engineer:</strong></p>
+        <p>"Sos un ingeniero de seguridad experto. Revisa este formulario de login e identifica vulnerabilidades de seguridad y recomendaciones de buenas prácticas."</p>
+        <p><strong>Como Developer Frontend:</strong></p>
+        <p>"Sos un desarrollador frontend con 10 años de experiencia. Revisa este código de formulario de login y sugiere mejoras de rendimiento y mantenibilidad."</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Revisión de código desde múltiples ángulos:</strong> Security, performance, UX, accesibilidad.</li>
+        <li><strong>Generación de contenido adaptado:</strong> Blog técnico vs explicación para principiantes.</li>
+        <li><strong>Análisis de producto:</strong> Desde el punto de vista de product manager, desarrollador, o usuario.</li>
+        <li><strong>Mentoría y enseñanza:</strong> Como mentor experto vs compañero de equipo.</li>
+        <li><strong>Brainstorming creativo:</strong> Desde perspectiva de diferentes roles o industrias.</li>
+        <li><strong>Debugging colaborativo:</strong> Obtener múltiples puntos de vista sobre un problema.</li>
+        <li><strong>Escritura de documentación:</strong> Para audiencias técnicas vs no técnicas.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Usos recomendados</h2>
+
+      <p>Usá personas para adaptar la voz, el enfoque y el nivel de detalle. Son especialmente útiles cuando necesitás opiniones desde perspectivas diferentes, como diseño, documentación o análisis técnico.</p>
+
+      <p>Cuidado con personas demasiado largas: si son muy pesadas o no aportan valor, pueden hacer que la respuesta se vuelva rígida o confusa.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

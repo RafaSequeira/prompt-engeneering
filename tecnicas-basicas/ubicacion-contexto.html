@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubicación del Contexto</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #74c0fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article-content {
+      line-height: 1.8;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .article-content h2 {
+      color: white;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: white;
+    }
+
+    .highlight {
+      color: #fff3cd;
+    }
+
+    .note {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #74c0fc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">🧠 Prompt Engineering</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+
+    <div class="article-header">
+      <h1>Ubicación del Contexto</h1>
+    </div>
+
+    <div class="article-content">
+      <p>La ubicación del contexto es cómo ordenás la información importante dentro de la entrada que le das al modelo. En contextos largos, la posición de esos datos puede marcar una gran diferencia.</p>
+
+      <p>El modelo tiende a usar mejor la información que aparece al principio y al final del mensaje. Lo que queda en el medio puede perder relevancia y, a veces, incluso producir resultados peores que si no se hubiera incluido.</p>
+
+      <p>Esto es especialmente importante cuando trabajás con conversaciones largas o documentos extensos. Si el contexto es muy grande, la información crítica debe ir primero, y la información adicional importante puede ir al final.</p>
+
+      <div class="quote">
+        <strong>Conclusión clave:</strong> no todo el contexto tiene el mismo efecto. Colocá lo esencial al principio y evitá poner datos importantes en medio de un bloque largo.
+      </div>
+
+      <p>Cuando una conversación crece demasiado, es buena práctica abrir un chat nuevo y mantener el contexto relevante al inicio. Eso reduce el riesgo de que la información se «pierda» dentro del prompt.</p>
+
+      <h2 style="margin-top: 2rem;">Ejemplo Funcional</h2>
+
+      <div class="note">
+        <strong>Recomendación: Información importante al inicio</strong>
+        <p>"CONTEXTO: Eres un especialista en JavaScript React.</p>
+        <p>TAREA: Analiza este código y sugieres mejoras de rendimiento.</p>
+        <p>[Código relevante aquí]</p>
+        <p>FOCUS: Prioriza reducción de re-renders."</p>
+        <strong>Evita:</strong>
+        <p>"[Mucho texto histórico o irrelevante]</p>
+        <p>Analiza este código [código al medio de un bloque extenso]</p>
+        <p>[Más información de relleno]"</p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Casos de uso</h2>
+
+      <ul>
+        <li><strong>Análisis de documentos largos:</strong> Coloca el resumen al inicio antes del documento completo.</li>
+        <li><strong>Conversaciones extensas:</strong> Reiterá los puntos clave al iniciar una nueva sesión.</li>
+        <li><strong>Revisión de código:</strong> Empieza con el contexto del problema, luego el código.</li>
+        <li><strong>Investigación y síntesis:</strong> Comienza con la hipótesis, luego la evidencia.</li>
+        <li><strong>Traducción de documentación:</strong> Pon la guía de estilo al inicio.</li>
+        <li><strong>Generación de contenido:</strong> Especifica el tono y audiencia en primer lugar.</li>
+        <li><strong>Debugging:</strong> Describe el problema primero, luego muestra el código.</li>
+      </ul>
+
+      <h2 style="margin-top: 2rem;">Buenas prácticas</h2>
+
+      <p>Si necesitás dar muchos datos, organizá el mensaje con lo más importante al principio, después los detalles secundarios y, si hay algo crítico adicional, ponelo al final. El centro debe reservarse para información menos urgente.</p>
+
+      <p>Así aumentás la probabilidad de que el modelo use correctamente lo que realmente importa y reducís la probabilidad de respuestas erráticas por contexto mal ubicado.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Guía de Prompt Engineering • Basado en el curso de Frontend Masters Practical Prompt Engineering for Developers</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
